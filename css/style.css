@@ -1952,7 +1952,7 @@ html, body {
     padding: 30px 20px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
   .navbar {
     position: relative;
@@ -2067,5 +2067,6 @@ color: #fff !important;
   
   height: 450px;
 }
+
 
 }
