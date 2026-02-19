@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="img/favicon.png" rel="icon">
+<title>Bridal Fashion Designer</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#BF9456,#8C6A3A);
+  padding:20px 0;
+}
+.container{
+  background:#fff;
+  width:100%;
+  max-width:400px;
+  padding:40px 30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.logo img{
+  width:180px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#333;
+}
+
+.input-group{
+  margin-bottom:18px;
+}
+
+.input-group input{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.input-group input:focus{
+  border-color:#BF9456;
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#BF9456;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#a87c3f;
+}
+
+.switch{
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+}
+
+.switch a{
+  color:#BF9456;
+  text-decoration:none;
+  font-weight:600;
+}
+
+@media(max-width:480px){
+  .container{
+    margin:20px;
+    padding:30px 20px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="logo">
+    <a href="index.html"><img src="img/bridal-logo.png"></a>
+  </div>
+
+  <h2>Login</h2>
+
+  <form>
+    <div class="input-group">
+      <input type="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password" required>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div class="switch">
+    Don't have an account? <a href="register.html">Register</a>
+  </div>
+
+</div>
+
+</body>
+</html>
