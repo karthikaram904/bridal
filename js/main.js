@@ -146,5 +146,18 @@ const toggleBtn = document.getElementById("rtl-toggle");
     setTheme(savedTheme);
   });
 
+const btn = document.getElementById("rtl-toggle");
+  const icon = document.getElementById("rtl-icon");
 
+  btn.addEventListener("click", () => {
+    const html = document.documentElement;
+
+    if (html.dir === "rtl") {
+      html.dir = "ltr";
+      icon.textContent = "LTR";
+    } else {
+      html.dir = "rtl";
+      icon.textContent = "RTL";
+    }
+  });
 
