@@ -30,22 +30,6 @@ body{
   border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
-  .forgot{
-  text-align:right;
-  margin-top:-8px;
-  margin-bottom:15px;
-}
-
-.forgot a{
-  font-size:13px;
-  color:#BF9456;
-  text-decoration:none;
-  font-weight:500;
-}
-
-.forgot a:hover{
-  text-decoration:underline;
-}
 
 .logo{
   text-align:center;
@@ -114,6 +98,29 @@ button:hover{
     padding:30px 20px;
   }
 }
+.password-group {
+  position: relative;
+}
+
+.password-group input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right:12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.eye-icon {
+  color: #777;
+}
+
+.eye-icon:hover {
+  color: #000;
+}
 </style>
 
 </head>
@@ -128,27 +135,34 @@ button:hover{
   <h2>Login</h2>
 
   <form>
-    <div class="input-group">
-      <input type="email" placeholder="Email Address" required>
-    </div>
-
-    <div class="input-group">
-      <input type="password" placeholder="Password" required>
-    </div>
-    <!-- Forgot Password -->
-  <div class="forgot">
-    <a href="#">Forgot Password?</a>
+  <div class="input-group">
+    <input type="email" placeholder="Email Address" required>
   </div>
 
-    <button type="submit">Login</button>
-  </form>
+  <div class="input-group password-group">
+    <input type="password" id="password" placeholder="Password" required>
+    <span id="togglePassword" class="eye-icon">👁️</span>
+  </div>
+
+  <button type="submit">Login</button>
+</form>
 
   <div class="switch">
     Don't have an account? <a href="register.html">Register</a>
   </div>
 
 </div>
+<script>
+  const togglePassword = document.getElementById("togglePassword");
+  const password = document.getElementById("password");
 
+  togglePassword.addEventListener("click", () => {
+    const type = password.type === "password" ? "text" : "password";
+    password.type = type;
+
+    // icon change
+    togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+  });
+</script>
 </body>
 </html>
-
