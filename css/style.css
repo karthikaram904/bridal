@@ -2067,6 +2067,10 @@ color: #fff !important;
   
   height: 450px;
 }
+    .navbar .navbar-nav .nav-link {
+  margin: 0 8px;
+ font-size: 12px;
+}
 
 
 }
